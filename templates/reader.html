@@ -31,11 +31,8 @@
 </form>
 
 {% if feed %}
-
 <h2>{{ feed.feed.title }}</h2>
-
 {% if feed.entries %}
-
 {% for entry in feed.entries %}
 
 <div class='card'>
@@ -58,9 +55,15 @@ Feed
 
 {% else %}
 
-<br />
+<br/>
 
-<p>Enter your favorite RSS feed above.</p>
+    <footer class="small">
+     <div class="col-md-6 mt-md-0 mt-3">
+        <!-- Content -->
+        <p>Enter your favorite RSS feed</p>
+      </div>
+    </footer>
+
 
 {% endif %}
 

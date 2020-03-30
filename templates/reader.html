@@ -10,11 +10,11 @@
 
 <div class='form-group mx-sm-5 mb-2'>
 
-<input type='email' class='form-control' placeholder='your mail' name='mail'>
+<input type='email' class='form-control' style="width: 600px" placeholder='your mail' name='mail'>
 
 </div>
 
-<button type='submit' class='btn btn-primary mb-2'>Send my URL FEED</button>
+<button type='submit' class='btn btn-secondary mb-2'>Send my URL FEEDs</button>
 
 </form>
 
@@ -22,7 +22,7 @@
 
 <div class='form-group mx-sm-5 mb-2'>
 
-<input type='text' class='form-control' placeholder='paste link' name='url'>
+<input type='text' class='form-control' style="width: 600px;" placeholder='paste link' name='url'>
 
 </div>
 
@@ -46,7 +46,7 @@ Feed
 <div class='card-body'>
 <h5 class='card-title'>Headline: {{ entry.title }}</h5>
 <p class='card-text'>Description: {{ entry.description }}</p>
-<a href='{{ entry.link }}' class='btn btn-primary'>Read more</a>
+<a href='{{ entry.link }}' class='btn btn-info'>Read more</a>
 </div>
 
 </div><p>{{ entry.published }}</p>

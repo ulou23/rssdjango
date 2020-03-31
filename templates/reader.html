@@ -1,11 +1,29 @@
 
 {% extends 'base.html' %}
 
+<div class="container">
+{% block content %}
+{% for u in list %}
+    <br>
+    <ul class="list-group">
+    <form class='form-inline'>
+    <div class='form-group mx-sm-5 mb-2'>
+   <li class="list-group-item"> {{ u.urlinput }}
+    </div>
+<button type='submit' class='btn btn-danger mb-2'>Delete</button>
+    <button type='submit' class='btn btn-Info mb-2'>Update</button>
+    <button type='submit' class='btn btn-primary mb-2'>Load</button>
+    </li>
+    </form>
+</ul>
+{% empty %}
+    <p class="text-center bg-warning"> No url </p>
+{% endfor %}
+{% endblock %}
 
+</div>
 {% block body %}
-
-<br />
-
+    <br />
 <form class='form-inline'>
 
 <div class='form-group mx-sm-5 mb-2'>
@@ -26,9 +44,10 @@
 
 </div>
 
-<button type='submit' class='btn btn-primary mb-2'>Load Feed</button>
+<button type='submit' class='btn btn-primary mb-2'>Add to List & Load Feed</button>
 
 </form>
+</br>
 
 {% if feed %}
 <h2>{{ feed.feed.title }}</h2>
